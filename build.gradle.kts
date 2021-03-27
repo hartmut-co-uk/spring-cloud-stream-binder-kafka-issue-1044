@@ -13,6 +13,8 @@ java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
 	mavenCentral()
+	maven { url = uri("https://repo.spring.io/milestone") }
+	maven { url = uri("https://repo.spring.io/snapshot") }
 }
 
 extra["springCloudVersion"] = "2020.0.1"
@@ -23,6 +25,8 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.springframework.cloud:spring-cloud-stream")
 	implementation("org.springframework.cloud:spring-cloud-stream-binder-kafka-streams")
+	implementation("org.springframework.cloud:spring-cloud-function-context:3.1.3-SNAPSHOT")
+	implementation("org.springframework.cloud:spring-cloud-function-core:3.1.3-SNAPSHOT")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
